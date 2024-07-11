@@ -1,0 +1,19 @@
+layout {
+    tab name="Vault" focus=true cwd="~/Library/CloudStorage/GoogleDrive/ObsidianVault" {
+        pane name="Martin's vault" command="git status"
+    }
+
+    tab name="Editor" cwd="~/Library/CloudStorage/GoogleDrive/ObsidianVault" {
+        pane name="nvim" command="nvim"
+    }
+
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+  }
+}
